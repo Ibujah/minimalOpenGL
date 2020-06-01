@@ -40,6 +40,10 @@ link_directories(${OpenGL_LIBRARY_DIRS}
 add_definitions(${OpenGL_DEFINITIONS}
 				${GLM_DEFINITIONS})
 
+configure_file(${CMAKE_SOURCE_DIR}/build/compile_commands.json
+			   ${CMAKE_SOURCE_DIR}/compile_commands.json
+			   COPYONLY)
+
 # define sub libraries name
 set(DISPLAY3D_LIB "Display3D")
 
