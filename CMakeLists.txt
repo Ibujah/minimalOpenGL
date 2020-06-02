@@ -40,6 +40,7 @@ link_directories(${OpenGL_LIBRARY_DIRS}
 add_definitions(${OpenGL_DEFINITIONS}
 				${GLM_DEFINITIONS})
 
+file(APPEND ${CMAKE_SOURCE_DIR}/build/compile_commands.json "")
 configure_file(${CMAKE_SOURCE_DIR}/build/compile_commands.json
 			   ${CMAKE_SOURCE_DIR}/compile_commands.json
 			   COPYONLY)
